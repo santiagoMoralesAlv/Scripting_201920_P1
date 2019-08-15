@@ -2,7 +2,7 @@
 {
     public class Necklace : Accessory
     {
-        public Necklace(int style) : base(style)
+        public Necklace(int style) : base(style, typeAccessory.Necklace)
         {
         }
 

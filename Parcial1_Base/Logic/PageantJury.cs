@@ -23,6 +23,12 @@ namespace Parcial1_Base.Logic
         {
             bool result = false;
 
+            if (d.TotalAccessories > 0)
+            {
+                contestants.Add(d);
+                result = true;
+            }
+
             return result;
         }
 
@@ -44,13 +50,18 @@ namespace Parcial1_Base.Logic
 
             switch (contestants.Count)
             {
-                case 1:
-                    // Single contestant is deemed winner, no matter its score.
-                    winner = contestants[0];
+                case 0:
                     break;
 
                 default:
-                    // Sorts the contestants and return the one with the highest style score.
+                    winner = contestants[0];
+                    int maxStyle = contestants[0].Style;
+                    foreach (Doll iDoll in contestants ) {
+                        if (iDoll.Style > maxStyle) {
+                            maxStyle = iDoll.Style;
+                            winner = iDoll;
+                        }
+                    }
                     break;
             }
 

@@ -5,6 +5,16 @@
     /// </summary>
     public abstract class Accessory : IClonable<Accessory>
     {
+        public enum typeAccessory
+        {
+            Dress,
+            Purse,
+            Bracelet,
+            Necklace
+        }
+        public typeAccessory type;
+
+
         /// <summary>
         /// The base style score.
         /// </summary>
@@ -13,7 +23,28 @@
         /// <summary>
         /// The style score bonus percentage, if any applies.
         /// </summary>
-        protected virtual float StyleMod { get => 0; }
+        protected virtual float StyleMod { get {
+
+                float value = 1;
+
+                switch (type)
+                {
+                    case Accessory.typeAccessory.Bracelet:
+                        break;
+                        
+
+                    default:
+                        value = 1;
+                    break;
+
+                }
+
+                return value;
+            }
+
+
+
+        }
 
         /// <summary>
         /// Returns the Style score for this accessory
@@ -27,9 +58,10 @@
             protected set => style = value;
         }
 
-        public Accessory(int style)
+        public Accessory(int style, typeAccessory mtype)
         {
             Style = style;
+            this.type = mtype;
         }
 
         /// <summary>

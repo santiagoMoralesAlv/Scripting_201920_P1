@@ -41,9 +41,12 @@
         /// </summary>
         public EDressCategory Category { get; protected set; }
 
-        public Dress(int style, EColor color, EDressCategory category) : base(style)
+        public Dress(int style, EColor color, EDressCategory category) : base(style, typeAccessory.Dress)
         {
-            
+            this.Style = style;
+            this.type = typeAccessory.Dress;
+            this.Color = color;
+            this.Category = category;
         }
 
         /// <summary>

@@ -5,7 +5,7 @@
     /// </summary>
     public class Bracelet : Accessory
     {
-        public Bracelet(int style) : base(style)
+        public Bracelet(int style) : base(style, typeAccessory.Bracelet)
         {
         }
 
