@@ -1,0 +1,24 @@
+Feedback
+
+* Hay lógica para agregar concursantes, pero no valida que sean hasta 4 ni que sean diferentes (0.1 / 0.25)
+* Hay lógica correcta para determinar a la concursante ganadora. (0.25 / 0.25)
+* No hay lógica para determinar que una concursante pueda participar si tiene un vestido equipado (0.0 / 0.5)
+* La lógica de equipar accesorios tiene varios problemas. Por un lado, añade indiscriminadamente pulseras, lo cual no satisface el enunciado. Por otro lado, la validación del tipo de accesorio en el caso default solo parece ejecutarse hasta que se encuentra un accesorio ya equipado del tipo del que se pretende equipar; pero de todos modos lo equipa.
+* No hay lógica para determinar si se está equipando un vestido al tener ya uno equipado (0.0 / 0.25)
+* No hay lógica para determinar que un collar puede equiparse con ciertos vestidos (0.0 / 0.25)
+* No hay lógica para incrementar el puntaje de estilo que da un bolso si es equipado con ciertos vestidos (0.0 / 0.25)
+* No hay lógica que limite las pulseras según el vestido equipado (0.0 / 1.0)
+* Hay lógica correcta de desequipamiento de accesorios (0.25 / 0.25); 
+* Hay lógica correcta que desequipa todos los accesorios si el vestido es desequipado (0.5 / 0.5)
+
+Total funcionalidad: 1.1 / 3.5
+
+Diseño orientado a objetos
+* Si bien la adición de un enumerado para clasificar los tipos de accesorios, esto invalida por completo la jerarquía de clases, pues con ese campo solo es necesaria la clase Accessory.
+
+* Dado que no hay lógica que satisfaga la funcionalidad, no puede haber consideración al diseño orientado a objetos aplicado (0.0 / 1.5)
+
+Total diseño orientado a objetos: 0.0 / 1.5
+
+
+Total: (1.1 / 5.0)
